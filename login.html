@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="btnnnn">
+        <button id="bbtn">Backward</button>
+        <button id="fbtn">Forward</button>
+    </div>
+    <div id="loginpage">
+       <h1 id="loginname">Sign up</h1><hr id="loghr">
+<form>
+    <input type="text" id="name" placeholder="Enter your name">
+<br><br><input type="date" id="date">
+<br><br><input type="email" id="emain" placeholder="Enter your Email ">
+<br><br><input type="password" id="password" placeholder="create your new password">
+<br><br><input type="password" id="password2" placeholder="Re-enter password">
+<br><br><button id="siup">Sign Up Now</button>
+</form>
+<br>or<hr style="border:2px solid grey;">
+
+<p id="infont">I have account already..</p>
+<button id="inbtn">Log In Now</button>
+
+
+
+    </div>
+    <div id="logpage">
+       <form>
+        <h1 id="ifont">Log In Now</h1>
+        <br><hr id="loghr">
+
+        <input type="text" placeholder="User name or Email enter" id="lemail">
+        <input type="password" id="lpassword" placeholder="Enter your password">
+        <button id="loginbtnl">log in</button>
+        <p style="color: blue; margin-top: 10px;">Forgotten password?</p>
+    
+    </form>
+    <br><br>or<hr>
+    <h2 id="cfont">You have No Account</h2>
+    <button id="cbtn">Create A New Account </button>
+
+    </div>
+
+
+
+    <script>
+        var logclick=document.getElementById("inbtn");
+        logclick.onclick=function(){
+            var signuppage=document.getElementById("loginpage");
+            signuppage.style.display="none";
+            var logpage=document.getElementById("logpage");
+            logpage.style.display="block";
+
+        }
+
+        var sign=document.getElementById("cbtn");
+        sign.onclick=function(){
+            var logpage=document.getElementById("logpage");
+            logpage.style.display="none";
+            var signuppage=document.getElementById("loginpage");
+            signuppage.style.display="block";
+        }
+
+
+        var back=document.getElementById("bbtn");
+        back.onclick=function(){
+
+            history.back();
+        }
+
+        var forw=document.getElementById("fbtn")
+            forw.onclick=function(){
+                history.forward();
+
+            }
+        
+
+
+
+    </script>
+    
+</body>
+</html>
